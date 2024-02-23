@@ -16,7 +16,26 @@ repositories {
 }
 
 dependencies {
+
+	// devtool
+	// https://mvnrepository.com/artifact/gradle.plugin.com.mtbvang/devtool
+	// https://kim-oriental.tistory.com/8
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
+
+	//	RestController
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// jpa
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// lombok
+	// https://projectlombok.org/setup/gradle
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
